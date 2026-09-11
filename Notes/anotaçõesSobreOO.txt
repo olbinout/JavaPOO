@@ -1,0 +1,73 @@
+Anotações relacionadas ao estudo de Programação Orientada a Objetos para as disciplinas de POO e PDS com o intuito de obter uma base sólida
+
+	Antes da linguagem procedural, os programadores escreviam os códigos em linguagem binária. Ao longo do tempo, programas que necessitavam de uma resolução maior, acabavam se tornando muito complexo e difícil de trabalhar devido a extrema facilidade de acontecer erros e a dificuldade de dar manutenção neles. Com isso, foi desenvolvido um novo paradigma, que é a programação em linguagem procedural. Uma das mais famosas é a linguagem C. Basicamente, essas linguagens proporcionam o uso de procedimentos (funções) para resolver um determinado problema, com o tempo, as aplicações foram ficando maiores e os procedimentos começavam a ficar mais complexas porque cada procedimento exigia que os dados fossem tratados de uma forma diferente, uma mudança nos dados significaria que em todos os procedimentos que aquele dado foi usado, deveria ser reescrito para que ele funcionasse do novo jeito implementando, ou seja, muito ruim para manutenção. Já em Java, que é uma linguagem orientada a objetos, utilizam-se classes, atributos e métodos. Para simplificar essa distinção, vamos considerar que existe um retângulo (base  x altura) e eu quero descobrir a área dele. Em C, consideramos as variáveis “altura” e “base” como se fossem dados isolados e criaríamos uma função que recebe esses dados e calcula a área. Em Java, iríamos considerar que o retângulo é um objeto e criaríamos a classe “Retangulo” e teria como atributo “base” e “altura” e o método “calcularArea”.
+    
+    O exemplo em C:
+    #include <stdio.h>
+
+    // Função isolada que apenas calcula a área
+    float calcularArea(float largura, float altura) {
+        return largura * altura;
+    }
+
+    int main() {
+        // Dados separados da lógica de cálculo
+        float largura = 5.0;
+        float altura = 10.0;
+        
+        // Chamada da função passando os dados
+        float area = calcularArea(largura, altura);
+        
+        printf("Área do retângulo: %.2f\n", area);
+        return 0;
+    }
+
+    O exemplo em Java: 
+
+    // Definição do objeto Retângulo
+    class Retangulo {
+        // Atributos (Dados)
+        double largura;
+        double altura;
+
+        // Construtor para criar o retângulo com suas medidas
+        public Retangulo(double largura, double altura) {
+            this.largura = largura;
+            this.altura = altura;
+        }
+
+        // Método (Ação) que usa os próprios dados do objeto
+        public double calcularArea() {
+            return this.largura * this.altura;
+        }
+    }
+
+    // Classe principal para executar o programa
+    public class Main {
+        public static void main(String[] args) {
+            // Criando uma instância (objeto) do Retângulo
+            Retangulo meuRetangulo = new Retangulo(5.0, 10.0);
+            
+            // O próprio objeto sabe como calcular sua área
+            double area = meuRetangulo.calcularArea();
+            
+            System.out.println("Área do retângulo: " + area);
+        }
+    }
+
+
+
+    Vantagens e Objetivos da OO
+
+        Natural: Em vez de programar em termos de regiões de memória, você pode programar utilizando a terminologia do seu problema em particular. 
+        (Basicamente, para dirigir não é necessário saber todas as peças que fazer o carro funcionar, você só precisar se atentar nos pedais, volante, câmbio e definir onde desejar ir. Em C, você precisa dizer quase que exatamente o que o computador deve fazer e acaba se afastando da resolução do problema que você quer solucionar na vida real. Em Java, você se preocupa com os objetos que estarão envolvidos nessa resolução)
+
+        Confiável: Como o POO aprensenta módulos, quando é nececessário alguma modificação em métodos, atributos ou objetos, é mais fácil de dar manutenção. Portanto, mais confiável, pois é mais difícil de quebrar devido a inteligibilidade de manutenção, o OO permite que seja mais flexível na parte de testes.
+
+        Reutilizável: Possibilita criar ideias genérica para resolver um problema específico. 
+
+        Manutível: Cerca de 60% a 80% do tempo gasto para fazer um programa é, na verdade, gasto para fazer manutençõe. Apenas 20% é relacionada ao desenvolvimento.
+
+        Extensível: A POO aprensenta vários recursos para que o software possa receber novas funcionalidades. Estes recursos são: herança, polimorfismo, sobreposição, delegação e demais padrões de projeto.
+
+        Oportuno: Quando o programa é divido em vários objetos o desenvolvimento de cada parte pode ocorrer em conjunto. Sendo assim, desenvolvedores podem modificar objetos ao mesmoo tempo, permitindo resolver o problema mais rápido.

@@ -1,0 +1,25 @@
+Nesta unidade vamos estudar:
+    Métodos → Classes → Objetos → Construtores → Getters/Setters → Encapsulamento → this
+
+Conceitos: 
+    Método = uma ação/comportamento.
+    Classe = um modelo de algo da realidade, podendo possuir dados e atributos.
+    Objeto = uma instância desse modelo.
+
+A sintaxe para instanciar um objeto a partir de uma classe em Java:
+    TipoDaClasse nomeDaVariavel = new TipoDaClasse();
+    
+    Exemplo:
+    Carro meuCarr = new Carro();
+        - Foi criado na memória um objeto da classe "Carro" e o nome desse objeto é "meuCarro".
+
+
+Qual a função de um Construtor?
+    Em uma classe, pode haver ou não um Construtor.
+    Caso não haja, na hora de instanciar um objeto, você terá que criar este objeto na memória para depois definir as suas características. (Exemplo_2 mostra isso)
+    Caso haja o Construtor na classe, então ele é quem irá receber os argumentos e irá criar um objeto na memória com as características que lhe foram impostas. (Exemplo_3)
+
+Para que serve o Encapsulamento?
+    Serve para que os atributos das classes não sejam modificados a partir da main (segurança).
+    Servem também para que outras classes não precisem ser modificadas uma por uma caso ela utilize um atributo de uma determinada classe (organização e economia de tempo)
+

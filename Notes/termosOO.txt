@@ -1,6 +1,0 @@
-Classe: É um molde de um objeto. Uma definição abstrata;
-Atributo: É um característica daquela classe;
-Método: É um comportamento de uma classe;
-Objeto: É uma instância de uma classe;
-Instância: É a materialização de uma classe que passa a existir na memória do computador.
-Construtor: É um método usado para inicializar um objeto durante a instanciação 
